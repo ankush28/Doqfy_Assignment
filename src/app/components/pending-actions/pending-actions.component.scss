@@ -1,0 +1,52 @@
+.pendingbox {
+  padding: 23px 16px;
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.pendingbox .heading {
+  margin: 0px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.codetext {
+  margin: 0px;
+  font-size: 14px;
+}
+.timeline {
+  margin: 0px;
+  font-size: 10px;
+  background-color: rgb(237, 237, 237);
+  border-radius: 4px;
+  padding: 3px 6px;
+}
+.hint {
+  margin: 0px;
+  font-size: 12px;
+  color: grey;
+  margin-top: 6px;
+}
+.container {
+  padding: 12px 10px;
+  border: 1px solid rgb(203, 203, 203);
+  font-family: "Poppins", sans-serif;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b0b0b0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

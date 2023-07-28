@@ -1,0 +1,44 @@
+<div class="navbar-box">
+  <img width="120px" src="https://doqfy.in/wp-content/uploads/2020/06/cropped-logo.png" alt="Doqfy logo" />
+  <div class="nav-box">
+    <ul fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="25px">
+      <li [matMenuTriggerFor]="menu">
+        Services
+        <mat-icon>keyboard_arrow_down</mat-icon>
+        <mat-menu #menu="matMenu">
+          <div class="dropdown-menu">
+            <ul fxLayout="column" fxLayoutAlign="space-between left" fxLayoutGap="15px">
+              <li>Buisness</li>
+              <li>Individual</li>
+              <li>Professional</li>
+            </ul>
+          </div>
+        </mat-menu>
+      </li>
+      <li>User Managment</li>
+      <li>My Orders</li>
+      <li>Reports</li>
+      <li>Stamp Inventory</li>
+      <li>Bar Codes</li>
+      <li class="disabled">Invoice</li>
+      <span>Comming soon</span>
+    </ul>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign=" center">
+    <i matBadge="3" matBadgeColor="warn" class="bx bx-bell bell-icon"></i>
+    <div class="userBox" fxLayout="row" fxLayoutAlign=" center">
+      <div class="user-textBox" fxLayout="row" fxLayoutAlign="center">
+        <mat-icon>keyboard_arrow_down</mat-icon>
+        <p>
+          Michael Smith
+        </p>
+      </div>
+      <div class="usernameBox">
+        <p>
+          M
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

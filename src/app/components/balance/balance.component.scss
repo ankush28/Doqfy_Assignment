@@ -1,0 +1,35 @@
+.balanceBox {
+  padding: 23px 16px;
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+}
+
+.balanceBox p{
+    margin: 0px;
+}
+.balanceBox .title{
+    font-weight: 600;
+}
+.balanceBox .value{
+    font-weight: 600;
+    font-size: 26px;
+}
+.balanceBox .currBalance{
+    font-size: 13px;
+    color: grey;
+}
+.balanceBox  .discription{
+    font-size: 13px;
+    margin-top: 8px;
+    font-weight: 500;
+}
+.balanceBox  .discription span{
+    text-decoration: underline;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.icon{
+    color: var(--primary-color); font-size: 34px; margin-right: 10px;
+}

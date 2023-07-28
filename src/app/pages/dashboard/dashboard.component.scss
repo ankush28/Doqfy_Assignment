@@ -1,0 +1,49 @@
+.sidebox {
+  margin-right: 20px;
+}
+.userWelcome-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 23px 16px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.userWelcome-box .title {
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
+}
+.userWelcome-box .title span {
+  margin-left: 6px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+.userWelcome-box .subtitle {
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  color: grey;
+  margin-top: 4px;
+  padding-left: 25px;
+}
+.balance {
+  margin-top: 20px;
+}
+.pending-actions {
+  margin-top: 20px;
+}
+
+.container {
+  margin: 50px auto;
+  max-width: 400px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="date"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}

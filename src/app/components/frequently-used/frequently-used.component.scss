@@ -1,0 +1,41 @@
+.freqBox{
+    padding: 23px 16px;
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+}
+.heading{
+    margin: 0px;
+    font-weight: 600;
+}
+.container{
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.container-box{
+    padding: 18px 12px;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+
+}
+
+.title{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+.subtext{
+    font-size: 13px;
+    color: grey;
+    margin: 0;
+    margin-top: 6px;
+}
+.cta{
+    margin: 0px;
+    text-decoration: underline;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 6px;
+}
