@@ -1,0 +1,235 @@
+<div class="orderBox">
+	<div class="dateBox">
+		<div fxFlex.gt-xs="column"
+			fxLayoutAlign.gt-xs="space-between center">
+			<mat-form-field class="field">
+				<mat-label>All branches</mat-label>
+				<mat-select>
+					<mat-option value="option1">Test</mat-option>
+					<mat-option value="option2"
+						disabled>
+						Test
+					</mat-option>
+					<mat-option value="option3">Test</mat-option>
+				</mat-select>
+			</mat-form-field>
+
+			<div class="field"
+				fxLayout.lg="row"
+				fxLayout.xs="column"
+				fxLayoutAlign.lg="space-between"
+				fxLayoutAlign="center">
+				<mat-form-field (click)="openCalendar()"
+					class="custom-datepicker">
+					<mat-label>Custom Range</mat-label>
+					<mat-date-range-input [rangePicker]="picker">
+						<input [readonly]="true"
+							matStartDate>
+						<input [readonly]="true"
+							matEndDate>
+					</mat-date-range-input>
+					<mat-datepicker-toggle [for]="picker"
+						matSuffix>
+						<mat-icon matDatepickerToggleIcon>arrow_drop_down</mat-icon>
+					</mat-datepicker-toggle>
+					<mat-date-range-picker #picker></mat-date-range-picker>
+				</mat-form-field>
+
+				<mat-form-field class="montyearpicker">
+					<mat-label>Month and Year</mat-label>
+					<input [matDatepicker]="dp"
+						[formControl]="date"
+						matInput>
+					<mat-hint>MM/YYYY</mat-hint>
+					<mat-datepicker-toggle [for]="dp"
+						matIconSuffix></mat-datepicker-toggle>
+					<mat-datepicker #dp
+						(monthSelected)="setMonthAndYear($event, dp)"
+						startView="multi-year"
+						panelClass="example-month-picker">
+					</mat-datepicker>
+				</mat-form-field>
+			</div>
+
+		</div>
+	</div>
+	<div class="orderdetails">
+		<p class="orderdetails-title">Order details</p>
+		<div fxLayout.lg="row"
+			fxLayout.sm="row"
+			fxLayout.md="row"
+			fxLayout.xs="column"
+			fxLayoutGap.xs="20px"
+			fxLayoutAlign.lg="space-between center"
+			fxLayoutAlign.md="space-between center"
+			fxLayoutAlign.sm="space-between center"
+			style="margin-top: 20px">
+
+			<div fxFlex.lg="24"
+			class="orderdetails-container"
+				fxFlex.sm="24"
+				fxFlex.xs="0"
+				fxFlex.md="24"
+				fxLayout="column"
+				>
+				<div class="orderHeading" fxLayout="row"
+					fxLayoutAlign="space-between center">
+					<p >18</p>
+					<i
+						class='bx bxl-dropbox'></i>
+				</div>
+				<p class="bottomText" >Total Orders</p>
+				<p style="margin: 0; font-size: 10px; color: grey">+2.4%</p>
+			</div>
+
+			<div fxFlex.lg="24"
+			class="orderdetails-container"
+				fxFlex.sm="24"
+				fxFlex.xs="0"
+				fxFlex.md="24"
+				fxLayout="column"
+				>
+				<div class="orderHeading" fxLayout="row"
+					fxLayoutAlign="space-between center">
+					<p >18</p>
+					<i
+						class='bx bxs-time-five'></i>
+				</div>
+				<p class="bottomText" >Total Orders</p>
+				<p style="margin: 0; font-size: 10px; color: grey">+2.4%</p>
+			</div>
+
+			<div fxFlex.lg="24"
+			class="orderdetails-container"
+				fxFlex.sm="24"
+				fxFlex.xs="0"
+				fxFlex.md="24"
+				fxLayout="column"
+				>
+				<div class="orderHeading" fxLayout="row"
+					fxLayoutAlign="space-between center">
+					<p >18</p>
+					<i
+						class='bx bxs-package'></i>
+				</div>
+				<p class="bottomText" >Total Orders</p>
+				<p style="margin: 0; font-size: 10px; color: grey">+2.4%</p>
+			</div>
+
+			<div fxFlex.lg="24"
+			class="orderdetails-container"
+				fxFlex.sm="24"
+				fxFlex.xs="0"
+				fxFlex.md="24"
+				fxLayout="column"
+				>
+				<div class="orderHeading" fxLayout="row"
+					fxLayoutAlign="space-between center">
+					<p >18</p>
+					<i
+						class='bx bxs-box'></i>
+				</div>
+				<p class="bottomText" >Total Orders</p>
+				<p style="margin: 0; font-size: 10px; color: grey">+2.4%</p>
+			</div>
+		</div>
+	</div>
+	<div fxLayout="row"
+		fxLayout.xs="column"
+		fxLayoutGap="20px">
+		<div fxLayout="row"
+			fxLayout.xs="column"
+			fxFlex="50"
+			class="graphBox">
+			<div fxFlex="50">
+				<p class="graphBox-heading">E-Sign Count</p>
+				<div style="margin-top: 55px;"
+					fxLayout="column"
+					fxLayout.gt-sm="row wrap"
+					fxLayout="column">
+					<div fxFlex="50"
+						fxLayout="row"
+						class="colorboxtext">
+						<div class="text" style=" background-color: #FF4560; "></div>
+						<p style="margin: 0px;">Initiated</p>
+					</div>
+					<div fxFlex="50"
+						fxLayout="row"
+						class="colorboxtext">
+						<div class="text" style="background-color: #00E396 ;"></div>
+						<p style="margin: 0px;">Pending</p>
+					</div>
+					<div fxFlex="50"
+						fxLayout="row"
+						class="colorboxtext">
+						<div class="text" style="background-color: #0068B9;"></div>
+						<p style="margin: 0px;">Signed</p>
+					</div>
+					<div fxFlex="50"
+						fxLayout="row"
+						class="colorboxtext">
+						<div class="text" style="background-color: #FEB019;"></div>
+						<p style="margin: 0px;">Expired</p>
+					</div>
+				</div>
+			</div>
+			<div fxFlex="50">
+				<div id="chart">
+					<apx-chart [series]="chartOptions.series"
+						[chart]="chartOptions.chart"
+						[labels]="chartOptions.labels"
+						[responsive]="chartOptions.responsive"></apx-chart>
+				</div>
+			</div>
+		</div>
+		<div fxLayout="row"
+			fxLayout.xs="column"
+			fxFlex="50"
+			style=" background-color: white; padding: 20px;">
+
+			<div fxFlex="50">
+				<p style="margin: 0; font-size: 16px; font-weight: 600; text-decoration: underline;">E-Sign Count</p>
+				<div style="margin-top: 55px;"
+					fxLayout="column"
+					fxLayout.gt-sm="row wrap"
+					fxLayout="column">
+					<div fxFlex="50"
+						fxLayout="row"
+						class="colorboxtext">
+						<div style="width: 10px; height: 10px; background-color: #FF4560; margin-right: 10px;"></div>
+						<p style="margin: 0px;">Initiated</p>
+					</div>
+					<div fxFlex="50"
+						fxLayout="row"
+						class="colorboxtext">
+						<div style="width: 10px; height: 10px; background-color: #00E396 ;margin-right: 10px;"></div>
+						<p style="margin: 0px;">Pending</p>
+					</div>
+					<div fxFlex="50"
+						fxLayout="row"
+						class="colorboxtext">
+						<div style="width: 10px; height: 10px; background-color: #0068B9;margin-right: 10px;"></div>
+						<p style="margin: 0px;">Signed</p>
+					</div>
+					<div fxFlex="50"
+						fxLayout="row"
+						class="colorboxtext">
+						<div style="width: 10px; height: 10px; background-color: #FEB019;margin-right: 10px;"></div>
+						<p style="margin: 0px;">Expired</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div fxFlex="50">
+				<div id="chart">
+					<apx-chart [series]="chartOptions.series"
+						[chart]="chartOptions.chart"
+						[labels]="chartOptions.labels"
+						[responsive]="chartOptions.responsive"></apx-chart>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

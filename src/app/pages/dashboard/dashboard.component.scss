@@ -4,7 +4,7 @@
 .userWelcome-box {
   background-color: white;
   border-radius: 8px;
-  padding: 23px 16px;
+  padding: 20px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
 }
 .userWelcome-box .title {
@@ -46,4 +46,25 @@ input[type="date"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   outline: none;
+}
+.sidebox-mobile{
+  position: fixed;
+  z-index: 100;
+  background-color: #F6F8FB;
+  padding: 20px;
+  left: 0;
+    top:67px ;
+    transition: left 0.3s ease;
+    height: 100%;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.collapse{
+  transition: left 0.3s ease;
+  left: -310px;
+  top: 67px;
+  position: fixed;
+  z-index: 100;
+  background-color: #F6F8FB;
+  height: 100%;
 }

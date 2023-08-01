@@ -1,0 +1,22 @@
+/* Set up the overall layout with Flexbox */
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the wrapper takes the full height of the viewport */
+  }
+  
+  /* The content area (router-outlet) will take the remaining vertical space */
+  .content {
+    flex: 1;
+  }
+  
+  /* Styling for the footer component */
+  app-footer {
+    flex-shrink: 0; /* Prevent the footer from shrinking when the content is too long */
+  }
+  
+  .nav{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}

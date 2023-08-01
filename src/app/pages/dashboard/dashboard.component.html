@@ -1,20 +1,72 @@
-<div fxLayout="row" style="padding: 0 45px; margin-top: 20px; ">
-    <section class="sidebox" fxFlex="23">
-        <div class="userWelcome-box">
-            <p class="title">👋 Welcome back,<span>Michael</span></p>
-            <p class="subtitle">25 May 2023 Tuesday</p>
-        </div>
-        <div class="balance">
-            <app-balance></app-balance>
-        </div>
-        <div class="pending-actions">
-            <app-pending-actions></app-pending-actions>
-        </div>
-    </section>
+<div
+  style="position: relative; "
+  fxLayout="row"
+  
+  ngStyle.gt-xs="padding: 32px; padding-top: 87px;"
+  ngStyle.xs="padding: 32px; padding-top: 87px"
+  ngStyle.gt-md="padding: 0 45px; margin-top: 101px; "
+>
+  <section
+    ngClass.gt-md="sidebox"
+    [ngClass.gt-xs]="{ collapse: !isOpen, 'sidebox-mobile': true }"
+    [ngClass.xs]="{ collapse: !isOpen, 'sidebox-mobile': true }"
+    fxFlex.gt-md="23"
+  >
+    <div class="userWelcome-box">
+      <p class="title">👋 Welcome back,<span>Michael</span></p>
+      <p class="subtitle">25 May 2023 Tuesday</p>
+    </div>
+    <div class="balance">
+      <app-balance></app-balance>
+    </div>
+    <div class="pending-actions">
+      <app-pending-actions></app-pending-actions>
+    </div>
+    <div>
+      <i
+        fxShow="false"
+        fxShow.xs="true"
+        fxShow.md="true"
+        fxShow.sm="true"
+        style="
+          background: white;
+          font-size: 30px;
+          border-radius: 50%;
+          margin-left: 10px;
+          position: absolute;
+          top: 4px;
+          right: -31px;
+        "
+        *ngIf="!isOpen"
+        (click)="toggleSidebar()"
+        class="bx bx-right-arrow-alt"
+      ></i>
+      <i
+        fxShow="false"
+        fxShow.xs="true"
+        fxShow.md="true"
+        fxShow.sm="true"
+        style="
+          background: white;
+          font-size: 30px;
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+          right: -14px;
+        "
+        *ngIf="isOpen"
+        (click)="closeSidebar()"
+        class="bx bx-left-arrow-alt"
+      ></i>
+    </div>
+  </section>
 
-    <section fxFlex>
-        <div>
-            <app-frequently-used></app-frequently-used>
-        </div>
-    </section>
+  <section fxFlex>
+    <div>
+      <app-frequently-used></app-frequently-used>
+    </div>
+    <div>
+      <app-order-details></app-order-details>
+    </div>
+  </section>
 </div>

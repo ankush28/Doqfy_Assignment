@@ -5,6 +5,20 @@
   padding: 10px 45px;
   background-color: white;
 }
+.navbar-mobilexs{
+  padding: 10px 10px!important;
+}
+.nav-box-mobile ul{
+  list-style-type: none;
+  padding: 0;
+  font-size: 14px;
+  margin: 0px;
+  padding: 20px;
+}
+.nav-box-mobile ul li{
+  display: flex;
+  align-items: center;
+}
 .nav-box ul {
   text-decoration: none;
   list-style-type: none;
@@ -26,6 +40,14 @@
   opacity: 0.6;
 }
 .nav-box ul span {
+  font-size: 10px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 4px;
+  padding: 3px;
+  font-family: "Poppins", sans-serif;
+}
+.nav-box-mobile ul span {
   font-size: 10px;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
@@ -75,6 +97,22 @@
   padding: 25px;
   border-radius: 50%;
   position: relative;
+
+  &__mobile{
+    padding: 15px;
+    color: white;
+  background: var(--primary-color); 
+  border-radius: 50%;
+  position: relative;
+
+  p{
+    margin: 0;
+  color: white;
+  position: absolute;
+  top: 13%;
+  left: 29%;
+  }
+  }
 }
 .usernameBox p {
   margin: 0;
@@ -92,4 +130,43 @@
 
 :host ::ng-deep .mat-badge-medium.mat-badge-above .mat-badge-content {
   top: -13px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Initial position, off the screen */
+  width: 300px;
+  height: 100vh;
+  background-color: white;
+  transition: right 0.3s ease; /* Smooth sliding transition */
+}
+
+.sidebar.open {
+  right: 0; /* Slide the sidebar into the screen */
+  z-index: 10000;
+
+}
+.navbar-mobile{
+  padding: 10px 45px;
+  background-color: white;
+}
+.closeicon{
+  font-size: 28px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.menu-icon{
+  font-size: 28px;
+}
+
+:host ::ng-deep .mat-expansion-panel:not([class*=mat-elevation-z]){
+  box-shadow: none;
+}
+:host ::ng-deep .mat-expansion-panel-header{
+  padding-left: 0px;
+  height: auto;
+}
+:host ::ng-deep .mat-content{
+  margin-right: 20px;
 }

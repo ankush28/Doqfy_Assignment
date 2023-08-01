@@ -1,44 +1,95 @@
-<div class="navbar-box">
-  <img width="120px" src="https://doqfy.in/wp-content/uploads/2020/06/cropped-logo.png" alt="Doqfy logo" />
-  <div class="nav-box">
-    <ul fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="25px">
-      <li [matMenuTriggerFor]="menu">
-        Services
-        <mat-icon>keyboard_arrow_down</mat-icon>
-        <mat-menu #menu="matMenu">
-          <div class="dropdown-menu">
-            <ul fxLayout="column" fxLayoutAlign="space-between left" fxLayoutGap="15px">
-              <li>Buisness</li>
-              <li>Individual</li>
-              <li>Professional</li>
-            </ul>
-          </div>
-        </mat-menu>
-      </li>
-      <li>User Managment</li>
-      <li>My Orders</li>
-      <li>Reports</li>
-      <li>Stamp Inventory</li>
-      <li>Bar Codes</li>
-      <li class="disabled">Invoice</li>
-      <span>Comming soon</span>
-    </ul>
-  </div>
-
-  <div fxLayout="row" fxLayoutAlign=" center">
-    <i matBadge="3" matBadgeColor="warn" class="bx bx-bell bell-icon"></i>
-    <div class="userBox" fxLayout="row" fxLayoutAlign=" center">
-      <div class="user-textBox" fxLayout="row" fxLayoutAlign="center">
-        <mat-icon>keyboard_arrow_down</mat-icon>
-        <p>
-          Michael Smith
-        </p>
-      </div>
-      <div class="usernameBox">
-        <p>
-          M
-        </p>
+<div class="navbar">
+  <div fxShow.xs="false" fxShow.md="false" fxShow.sm="false" fxShow.gt-lg="true" fxShow.lg="true" class="navbar-box">
+    <img width="120px" src="https://doqfy.in/wp-content/uploads/2020/06/cropped-logo.png" alt="Doqfy logo" />
+    <div class="nav-box">
+      <ul fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="25px">
+        <li [matMenuTriggerFor]="menu">
+          Services
+          <mat-icon>keyboard_arrow_down</mat-icon>
+          <mat-menu #menu="matMenu">
+            <div class="dropdown-menu">
+              <ul fxLayout="column" fxLayoutAlign="space-between left" fxLayoutGap="15px">
+                <li>Buisness</li>
+                <li>Individual</li>
+                <li>Professional</li>
+              </ul>
+            </div>
+          </mat-menu>
+        </li>
+        <li>User Managment</li>
+        <li>My Orders</li>
+        <li>Reports</li>
+        <li>Stamp Inventory</li>
+        <li>Bar Codes</li>
+        <li class="disabled">Invoice</li>
+        <span>Comming soon</span>
+      </ul>
+    </div>
+  
+    <div fxLayout="row" fxLayoutAlign=" center">
+      <i matBadge="3" matBadgeColor="warn" class="bx bx-bell bell-icon"></i>
+      <div class="userBox" fxLayout="row" fxLayoutAlign=" center">
+        <div class="user-textBox" fxLayout="row" fxLayoutAlign="center">
+          <mat-icon>keyboard_arrow_down</mat-icon>
+          <p>
+            Michael Smith
+          </p>
+        </div>
+        <div class="usernameBox">
+          <p>
+            M
+          </p>
+        </div>
       </div>
     </div>
   </div>
+  <div ngClass.xs="navbar-mobilexs" class="navbar-mobile"  fxLayout="row" fxLayoutAlign="space-between center" fxShow.xs="true" fxShow.md="true" fxShow.sm="true" fxShow.gt-lg="false" fxShow.lg="false">
+    <img width="120px" src="https://doqfy.in/wp-content/uploads/2020/06/cropped-logo.png" alt="Doqfy logo" />
+
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <div fxLayout="row" fxLayoutAlign=" center">
+        <i matBadge="3" matBadgeColor="warn" class="bx bx-bell bell-icon"></i>
+        <div class="userBox" fxLayout="row" fxLayoutAlign=" center">
+          <div class="user-textBox" fxLayout="row" fxLayoutAlign="center">
+            <mat-icon>keyboard_arrow_down</mat-icon>
+          </div>
+          <div class="usernameBox__mobile">
+            <p>
+              M
+            </p>
+          </div>
+        </div>
+      </div>
+      <i   (click)="toggleSidebar($event)" class="bx bx-menu menu-icon"></i>
+    </div>
+    
+  </div>
+  <div class="sidebar" [ngClass]="{'open': isOpen}"  #mobileNavbar>
+    <i (click)="closeSidebar()" class='bx bx-x closeicon'></i>
+    
+    <div class="nav-box-mobile">
+      <ul fxLayout="column" fxLayoutGap="14px">
+        <li>
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <li>Services</li>
+              </mat-expansion-panel-header>
+          
+              <li>tesr</li>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </li>
+        <li>User Managment</li>
+        <li>My Orders</li>
+        <li>Reports</li>
+        <li>Stamp Inventory</li>
+        <li>Bar Codes</li>
+        <li class="disabled">Invoice <span style="margin-left: 10px;">Comming soon</span> </li>
+      </ul>
+    </div>
+
+    
+  </div>
+  
 </div>
